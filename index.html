@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clean Water Initiative</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+        <!-- Navigation -->
+        <nav>
+            <h1>Clean Water Initiative</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#water-analysis">Test Water</a></li>
+                <li><a href="#track-and-trace">Trace Water Origin</a></li>
+                <li><a href="#publicity">Reports</a></li>
+                <li><a href="#remediation">Remediation</a></li>
+                <li><a href="#prevention">prevention</a></li>
+            </ul>
+        </nav>
+    
+        <div id="home">
+            <h2>Clean Water Initiative</h2>
+            <p>The Clean Water Initiative is a global effort to ensure everyone has access to safe, clean drinking water and sanitation. At home, this initiative can take many forms:</p>
+            
+            <h3>Conservation:</h3>
+            <ul>
+                <li>Reduce water usage: Take shorter showers, fix leaks promptly, collect rainwater for gardening, and use water-efficient appliances.</li>
+                <li>Water-saving fixtures: Install low-flow showerheads, toilets, and faucets.</li>
+                <li>Landscape wisely: Choose drought-tolerant plants, use mulch to retain moisture, and water efficiently.</li>
+            </ul>
+            
+            <h3>Quality:</h3>
+            <ul>
+                <li>Filter tap water: Use a water filter to remove impurities and improve taste.</li>
+                <li>Test water quality: Regularly test your home's water for contaminants.</li>
+                <li>Maintain plumbing: Keep pipes and fixtures clean to prevent contamination.</li>
+            </ul>
+            
+            <h3>Awareness:</h3>
+            <ul>
+                <li>Educate family members: Teach children and adults about the importance of water conservation and safe water practices.</li>
+                <li>Support organizations: Donate to or volunteer with organizations that promote clean water access globally.</li>
+                <li>Advocate for change: Support policies that protect water resources and promote sustainable water management.</li>
+            </ul>
+            
+            <p>By implementing these practices, you can contribute to the Clean Water Initiative and ensure a sustainable water future for yourself and your community.</p>
+        </div>        
+
+        <div id="water-analysis">
+            <h2>Water Quality Monitoring</h2>
+            <p>Real-time water quality data from IoT sensors.</p>
+            <button onclick="showWaterAnalysis()">View Data</button>
+            <div id="water-analysis-data" style="display: none;">
+                <table id="water-quality-table">
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Parameter</th>
+                            <th>Value</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+    <div id="track-and-trace">
+        <h2>Water Source Tracking</h2>
+        <p>Track the origin and journey of your water.</p>
+        <label for="source-location">Enter Source Location:</label>
+        <input type="text" id="source-location">
+        <button onclick="trackWater()">Track Water</button>
+        <div id="track-and-trace-map" style="display: none;">
+            <div id="map"></div> 
+        </div>
+    </div>
+
+    <div id="publicity">
+        <h2>Transparency and Reporting</h2>
+        <p>Access water quality reports and pollution source information.</p>
+        <button onclick="showReports()">View Reports</button>
+        <div id="publicity-reports" style="display: none;">
+            <ul id="report-list"></ul>
+        </div>
+    </div>
+
+    <div id="remediation">
+        <h2>Remediation</h2>
+        <ol>
+            <li>
+                <h3>Wastewater Treatment</h3>
+                <p>Likely the most effective way to reduce water pollution is by treating some of the water before it’s reintroduced into the waterways. This is a highly effective solution because wastewater treatment facilities are able to remove nearly all pollutants in wastewater via a chemical, physical, or biological process. Sewage will be taken through several chambers of the facility to slowly reduce its toxicity levels.</p>
+                <p>In order for wastewater treatment facilities to work exactly as intended, it’s important that the equipment remains in great condition. There are a range of water treatment sensors that can be used to be certain that the contaminants are being properly removed from the water before the water is released back into the environment. These sensors include pH sensors, conductivity sensors, and oxidation reduction potential sensors.</p>
+            </li>
+            <li>
+                <h3>Plastic Waste Reduction</h3>
+                <p>Plastics are commonly washed into the ocean and other bodies of water, which only serves to degrade the quality of the water. It’s believed that around 9-12 million tons of plastic reach the ocean every year, which is a number that needs to be reduced substantially to make sure that the quality of ocean water doesn’t worsen even more.</p>
+                <p>Along with water bottles, plastic is used in a myriad of different items that people use on an everyday basis, which include everything from clothes to various items around the home. To help reduce the amount of plastic waste that gets cycled into the environment, it’s recommended that you avoid using plastics whenever possible. Seek alternatives for plastic bottles, plastic utensils, and straws. Whenever you use plastic, make sure that you recycle.</p>
+            </li>
+            <li>
+                <h3>Water Conservation</h3>
+                <p>If you want to do your part to keep water clean and pure in a manner that will protect the environment, it’s important that you focus on water conservation when possible. There are many ways that you can conserve water on a daily basis. Whenever you’re shaving or brushing your teeth, it’s recommended that you keep the water turned off.</p>
+                <p>If you take a shower every day, opt for shorter showers that don’t go longer than you require. You could also decide to take a bath, which uses much less water. In the event that your landscape is outfitted with a garden, try to use only the amount of water that your plants require. Water is a scarce resource, which is why it’s important that you try to lessen your water usage when you can.</p>
+            </li>
+            <li>
+                <h3>Install a Water-Efficient Toilet in Your Home</h3>
+                <p>Consider installing an efficient toilet in your bathroom that won’t use as much water when you flush it. This method of reducing water pollution relates to the previous point in that it will help you conserve water. In the past, toilets would use up to 3.5 gallons of water when flushed. Eventually, the EPA mandated that all toilets must only flush 1.6 gallons of water down the drain with each flush. If you want to do your part to help the environment, ultra efficient toilets are available that only use 0.8-1.1 gallons of water per flush. Along with saving you money, a water-efficient toilet will also help you avoid wasting water.</p>
+            </li>
+            <li>
+                <h3>Septic Tanks</h3>
+                <p>Septic tanks are useful pieces of equipment that are able to treat sewage by efficiently separating the liquids from the solids. These tanks will use various biological processes to properly degrade the solid substances before the liquids flow directly into a land drainage system. Septic tanks limit water pollution by effectively getting rid of the pollution that is already in the water.</p>
+            </li>
+            <li>
+                <h3>Avoid Using the Toilet as a Wastebasket</h3>
+                <p>If you want to avoid adding to water pollution, it’s recommended that you avoid using your toilet as a wastebasket. Dust cloths, wrappers, and the majority of the tissues that you use should be placed directly into a wastebasket as opposed to a toilet. These items heighten the possibility that sewage lines will become blocked up and that the sewage will be difficult to properly clean when taken through a wastewater treatment facility or septic tank. Aside from toilet paper, you should avoid placing items in your toilet that would typically be reserved for the wastebasket.</p>
+            </li>
+            <li>
+                <h3>Stormwater Management</h3>
+                <p>Another effective solution for protecting the environment and reducing the amount of water pollution is to manage stormwater when possible. When stormwater flows along sidewalks, streets, and lawns, it picks up harmful pollutants that are then pushed into storm drains, streams, and rivers. Stormwater can be treated and managed through a variety of different processes, which include everything from sand filtration and electrocoagulation to reverse osmosis and advanced oxidation.</p>
+                <p>It’s important to manage stormwater and the pollution within it because this water will eventually reach rivers, streams, and oceans, which can worsen the pollution in these bodies of water. Managing stormwater should help to lessen this issue and reduce the amount of pollution that reaches the ocean.</p>
+            </li>
+            <li>
+                <h3>Green Agriculture</h3>
+                <p>The agricultural sector uses upwards of 70 percent of the surface water supplies around the earth for everything from livestock production to farming. Unfortunately, agriculture is the primary cause of water pollution. Whenever it rains, the pesticides and fertilizes wash away with the stormwater, which takes viruses and bacteria into the waterways. It’s possible, however, for agriculture to be more friendly to the environment.</p>
+                <p>To foster the use of green agriculture, consider planting trees and other plants nearby bodies of water, which will keep chemicals from being washed away when it rains. You should also avoid using pesticides that contain harmful chemicals.</p>
+            </li>
+            <li>
+                <h3>Denitrification</h3>
+                <p>Denitrification is a simple ecological process that’s designed to convert nitrates directly into nitrogen gas, which helps to prevent nitrate from being taken into the soil and contaminating the groundwater. When too much nitrate reaches groundwater, the nitrogen content of the water is far too high, which causes algae and phytoplankton to grow at an accelerated rate.</p>
+            </li>
+        </ol>
+    </div>
+
+    <div id="prevention">
+        <h2>Effects of Water Pollution on Human Health and the Environment  </h2>
+        <ol>
+            <li>
+                <h3>Wastewater Treatment</h3>
+                <p>Likely the most effective way to reduce water pollution is by treating some of the water before it’s reintroduced into the waterways. This is a highly effective solution because wastewater treatment facilities are able to remove nearly all pollutants in wastewater via a chemical, physical, or biological process. Sewage will be taken through several chambers of the facility to slowly reduce its toxicity levels.</p>
+                <p>In order for wastewater treatment facilities to work exactly as intended, it’s important that the equipment remains in great condition. There are a range of water treatment sensors that can be used to be certain that the contaminants are being properly removed from the water before the water is released back into the environment. These sensors include pH sensors, conductivity sensors, and oxidation reduction potential sensors.</p>
+            </li>
+            <li>
+                <h3>Plastic Waste Reduction</h3>
+                <p>Plastics are commonly washed into the ocean and other bodies of water, which only serves to degrade the quality of the water. It’s believed that around 9-12 million tons of plastic reach the ocean every year, which is a number that needs to be reduced substantially to make sure that the quality of ocean water doesn’t worsen even more.</p>
+                <p>Along with water bottles, plastic is used in a myriad of different items that people use on an everyday basis, which include everything from clothes to various items around the home. To help reduce the amount of plastic waste that gets cycled into the environment, it’s recommended that you avoid using plastics whenever possible. Seek alternatives for plastic bottles, plastic utensils, and straws. Whenever you use plastic, make sure that you recycle.</p>
+            </li>
+            <li>
+                <h3>Water Conservation</h3>
+                <p>If you want to do your part to keep water clean and pure in a manner that will protect the environment, it’s important that you focus on water conservation when possible. There are many ways that you can conserve water on a daily basis. Whenever you’re shaving or brushing your teeth, it’s recommended that you keep the water turned off.</p>
+                <p>If you take a shower every day, opt for shorter showers that don’t go longer than you require. You could also decide to take a bath, which uses much less water. In the event that your landscape is outfitted with a garden, try to use only the amount of water that your plants require. Water is a scarce resource, which is why it’s important that you try to lessen your water usage when you can.</p>
+            </li>
+            <li>
+                <h3>Install a Water-Efficient Toilet in Your Home</h3>
+                <p>Consider installing an efficient toilet in your bathroom that won’t use as much water when you flush it. This method of reducing water pollution relates to the previous point in that it will help you conserve water. In the past, toilets would use up to 3.5 gallons of water when flushed. Eventually, the EPA mandated that all toilets must only flush 1.6 gallons of water down the drain with each flush. If you want to do your part to help the environment, ultra efficient toilets are available that only use 0.8-1.1 gallons of water per flush. Along with saving you money, a water-efficient toilet will also help you avoid wasting water.</p>
+            </li>
+            <li>
+                <h3>Septic Tanks</h3>
+                <p>Septic tanks are useful pieces of equipment that are able to treat sewage by efficiently separating the liquids from the solids. These tanks will use various biological processes to properly degrade the solid substances before the liquids flow directly into a land drainage system. Septic tanks limit water pollution by effectively getting rid of the pollution that is already in the water.</p>
+            </li>
+            <li>
+                <h3>Avoid Using the Toilet as a Wastebasket</h3>
+                <p>If you want to avoid adding to water pollution, it’s recommended that you avoid using your toilet as a wastebasket. Dust cloths, wrappers, and the majority of the tissues that you use should be placed directly into a wastebasket as opposed to a toilet. These items heighten the possibility that sewage lines will become blocked up and that the sewage will be difficult to properly clean when taken through a wastewater treatment facility or septic tank. Aside from toilet paper, you should avoid placing items in your toilet that would typically be reserved for the wastebasket.</p>
+            </li>
+            <li>
+                <h3>Stormwater Management</h3>
+                <p>Another effective solution for protecting the environment and reducing the amount of water pollution is to manage stormwater when possible. When stormwater flows along sidewalks, streets, and lawns, it picks up harmful pollutants that are then pushed into storm drains, streams, and rivers. Stormwater can be treated and managed through a variety of different processes, which include everything from sand filtration and electrocoagulation to reverse osmosis and advanced oxidation.</p>
+                <p>It’s important to manage stormwater and the pollution within it because this water will eventually reach rivers, streams, and oceans, which can worsen the pollution in these bodies of water. Managing stormwater should help to lessen this issue and reduce the amount of pollution that reaches the ocean.</p>
+            </li>
+            <li>
+                <h3>Green Agriculture</h3>
+                <p>The agricultural sector uses upwards of 70 percent of the surface water supplies around the earth for everything from livestock production to farming. Unfortunately, agriculture is the primary cause of water pollution. Whenever it rains, the pesticides and fertilizes wash away with the stormwater, which takes viruses and bacteria into the waterways. It’s possible, however, for agriculture to be more friendly to the environment.</p>
+                <p>To foster the use of green agriculture, consider planting trees and other plants nearby bodies of water, which will keep chemicals from being washed away when it rains. You should also avoid using pesticides that contain harmful chemicals.</p>
+            </li>
+            <li>
+                <h3>Denitrification</h3>
+                <p>Denitrification is a simple ecological process that’s designed to convert nitrates directly into nitrogen gas, which helps to prevent nitrate from being taken into the soil and contaminating the groundwater. When too much nitrate reaches groundwater, the nitrogen content of the water is far too high, which causes algae and phytoplankton to grow at an accelerated rate.</p>
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>

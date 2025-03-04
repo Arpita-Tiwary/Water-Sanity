@@ -1,0 +1,21 @@
+{
+  "name": "aquaaware-dashboard",
+  "version": "1.0.0",
+  "description": "AquaAware Dashboard for tracking water availability and quality.",
+  "main": "app1.py",
+  "scripts": {
+    "test": "python -m unittest discover -s tests"
+  },
+  "dependencies": {
+    "Flask": "^2.0.1",
+    "Flask-SocketIO": "^5.0.1",
+    "leaflet": "^1.7.1",
+    "socket.io-client": "^4.0.0",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
